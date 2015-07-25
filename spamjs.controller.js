@@ -7,18 +7,20 @@ _define_({
 		htmlroot : undefined,
 		routerMap : {
 		},
-		_instance_ : function($context) {
-			this.$context = $context;
+		_instance_ : function(options) {
+			this.$context = options.$context;
+			this.id = options.id;
+			this.router = options.router;
 			this.initRouting();
 		},
 		initRouting : function() {
 			var self = this;
-			self.__router__ = ROUTER.instance();
+			self.router = self.router || ROUTER.instance();
 			_.each(this.routerMap, function(key, url) {
-				self.__router__.on(url, function(param){
+				self.router.on(url, function(param){
 					var result = key;
 					if(is.Function(self[key])){
-						result = self[key].apply(self.arguments);
+						result = self[key].apply(self,arguments);
 					}
 					jQuery.when(result).done(function(resp){
 						if(is.String(resp)){
@@ -29,16 +31,18 @@ _define_({
 							} else {
 								var viewModule = module(resp);
 								if(viewModule){
+									viewModule.id=self.id;
 									viewModule.instance().addTo(self.$context);
 								}
 							}
-						} else if(res.addTo){
+						} else if(resp && is.Function(resp.addTo)){
 							var moduleInstance;
 							if(resp.__view_id__){
 								moduleInstance = resp;
 							} else {
 								moduleInstance = res.instance();
 							}
+							moduleInstance.id=self.id;
 							moduleInstance.addTo(self.$context);
 						}
 					});
