@@ -1,0 +1,10 @@
+{
+	"name": "spamjs/controller",
+	"type": "library",
+	"description": "Javascript view controller for spamjs views",
+	"keywords": ["module", "file"],
+	"license": "MIT",
+	"require": {
+		"spamjs/view": ">=0.0.0"
+	}
+}

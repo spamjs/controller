@@ -1,0 +1,7 @@
+{
+	"name": "spamjs/controller",
+	"spamjs/controller": {
+		"js": ["spamjs.controller.js"],
+		"on": ["spamjs/view"]
+	}
+}
