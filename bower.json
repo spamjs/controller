@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"webmodules-jqrouter": ">=1.0.2",
-		"spamjs-view": ">=0.0.2"
+		"spamjs-view": ">=0.0.3"
 	},
 	"keywords": ["polyfils"],
 	"license": "MIT",
