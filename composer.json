@@ -5,7 +5,7 @@
 	"keywords": ["module", "file"],
 	"license": "MIT",
 	"require": {
-		"webmodules/jqrouter": ">=1.0.1",
+		"webmodules/jqrouter": ">=1.0.2",
 		"spamjs/view": ">=0.0.2"
 	}
 }

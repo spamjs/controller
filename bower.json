@@ -8,7 +8,7 @@
 		"url": "git://github.com/spamjs/view.git"
 	},
 	"dependencies": {
-		"webmodules-jqrouter": ">=1.0.1",
+		"webmodules-jqrouter": ">=1.0.2",
 		"spamjs-view": ">=0.0.2"
 	},
 	"keywords": ["polyfils"],
