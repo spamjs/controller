@@ -8,6 +8,7 @@
 		"url": "git://github.com/spamjs/view.git"
 	},
 	"dependencies": {
+		"webmodules-underscore": "1.8.31",
 		"webmodules-jqrouter": ">=1.0.2",
 		"spamjs-view": ">=0.0.3"
 	},

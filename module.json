@@ -2,6 +2,6 @@
 	"name": "spamjs/controller",
 	"spamjs/controller": {
 		"js": ["spamjs.controller.js"],
-		"on": ["webmodules/jqrouter","spamjs/view"]
+		"on": ["webmodules/underscore","webmodules/jqrouter","spamjs/view"]
 	}
 }
